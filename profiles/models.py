@@ -9,6 +9,8 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
     image = ImageField(upload_to="profiles")
 
+    followers = models.ManyToManyField('self', symmetrical=False, related_name='following', blank=True)
+
     def __str__(self):
         return self.user.username
 

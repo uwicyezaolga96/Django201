@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "feed",
     "profiles",
+    "followers",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
